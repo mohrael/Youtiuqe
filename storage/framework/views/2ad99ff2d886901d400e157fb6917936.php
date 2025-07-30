@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Youtique</title>
-    <link rel="icon" href="{{ asset('storage/img/favicon.jpg') }}" type="image/jpeg">
+    <link rel="icon" href="<?php echo e(asset('storage/img/favicon.jpg')); ?>" type="image/jpeg">
 
     <!-- Bootstrap & Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -132,7 +132,7 @@
     <nav id="mainNavigation" class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="{{ asset('storage/img/favicon-removebg-preview.png') }}" alt="Logo" height="40" class="me-2">
+      <img src="<?php echo e(asset('storage/img/favicon-removebg-preview.png')); ?>" alt="Logo" height="40" class="me-2">
                 <span class="fw-bold text-light">Youtique</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -153,3 +153,4 @@
             </div>
         </div>
     </nav>
+<?php /**PATH E:\downloads\NTI\Xampp\htdocs\ecommerce\Youtiuqe\resources\views/parts/navbar.blade.php ENDPATH**/ ?>

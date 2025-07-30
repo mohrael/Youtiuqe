@@ -217,7 +217,7 @@
 <?php endif; ?>
 
                 <!-- Authentication -->
-                <form method="POST" action="<?php echo e(route('logout')); ?>">
+                <form method="POST" action="https://ideal-flow-production.up.railway.app/logout">
                     <?php echo csrf_field(); ?>
 
                     <?php if (isset($component)) { $__componentOriginald69b52d99510f1e7cd3d80070b28ca18 = $component; } ?>

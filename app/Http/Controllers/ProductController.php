@@ -37,7 +37,7 @@ public function store(Request $request)
     $product->category_id = $request->category_id;
 
     if ($request->hasFile('image')) {
-        $imagePath = $request->file('image')->store('products', 'public');
+        $imagePath = $request->file('image')->store('img', 'public');
         $product->image = $imagePath;
     }
 

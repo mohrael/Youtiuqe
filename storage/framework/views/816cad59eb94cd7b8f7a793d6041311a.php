@@ -1,6 +1,6 @@
-@include('parts.navbar')
+<?php echo $__env->make('parts.navbar', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
-{{-- @section('content') --}}
+
 
     <!--  HERO SECTION -->
     <header class="py-5 text-center text-white" style="background-color: #d8a7b1;">
@@ -17,18 +17,18 @@
         <div class="container">
             <h2 class="text-center mb-5 text-dark">Featured Collection</h2>
             <div class="row">
-             @foreach($products as $prod) 
+             <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prod): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
                 <div class="col-md-3">
                     <div class="card border-0 shadow-sm mb-4">
-                        <img src="{{ asset('storage/img/' . $prod->image)  }}" class="card-img-top product-image" alt="Product">
+                        <img src="<?php echo e(asset('storage/img/' . $prod->image)); ?>" class="card-img-top product-image" alt="Product">
                             <div class="card-body text-center">
-                                <h5 class="card-title">{{$prod->productName}}</h5>
-                                <p class="card-text text-muted">{{$prod->price}}</p>
-                                <a href="{{route('showProduct',$prod->id)}}" class="btn btn-outline-dark btn-sm">{{$prod->description}}</a>
+                                <h5 class="card-title"><?php echo e($prod->productName); ?></h5>
+                                <p class="card-text text-muted"><?php echo e($prod->price); ?></p>
+                                <a href="<?php echo e(route('showProduct',$prod->id)); ?>" class="btn btn-outline-dark btn-sm"><?php echo e($prod->description); ?></a>
                             </div>
                     </div>
                 </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </section>
@@ -78,30 +78,32 @@
 <section class="wrapper">
   <div class="container">
     <div class="row">
-      @foreach($categories as $category)
+      <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-          <a href="{{route('showCategory',$category->id)}}" class="text-decoration-none text-dark">
-            <div class="card card-has-bg text-white border-0" style="background-image: url('{{ asset('storage/img/' . $category->image) }}');">
+          <a href="<?php echo e(route('showCategory',$category->id)); ?>" class="text-decoration-none text-dark">
+            <div class="card card-has-bg text-white border-0" style="background-image: url('<?php echo e(asset('storage/img/' . $category->image)); ?>');">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
                 <div class="card-body">
-                  <h4 class="card-title">{{ $category->name }}</h4>
+                  <h4 class="card-title"><?php echo e($category->name); ?></h4>
                 </div>
               </div>
             </div>
           </a>
         </div>
-      @endforeach
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
   </div>
 </section>
 
-{{-- @endsection --}}
-
-
-
-@extends('parts.footer')
 
 
 
 
 
+
+
+
+
+
+
+<?php echo $__env->make('parts.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH E:\downloads\NTI\Xampp\htdocs\ecommerce\Youtiuqe\resources\views/home.blade.php ENDPATH**/ ?>

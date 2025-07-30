@@ -13,6 +13,12 @@ class Product extends Model
     public function images(){
         return $this->hasMany(ProductImage::class);
     }
+    public function getMainImageUrlAttribute()
+{
+    $firstImage = $this->images->first();
+    return $firstImage ? asset('storage/img/' . $firstImage->image_path) : asset('.jpg');
+}
+
 
     public function category()
     {

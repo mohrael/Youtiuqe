@@ -10,7 +10,7 @@
     @foreach($category->products as $product)
         <div class="col-md-3">
             <div class="card border-0 shadow-sm mb-4">
-                <img src="{{asset('img/products/' .  $product->image)}}" class="card-img-top product-image" alt="{{ $product->productName }}">
+                <img src="{{asset('storage/img/' .  $product->image)}}" class="card-img-top product-image" alt="{{ $product->productName }}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $product->productName }}</h5>
                     <p class="card-text text-muted">{{ $product->price }} </p>

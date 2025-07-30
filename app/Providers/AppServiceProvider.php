@@ -24,7 +24,6 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
           }   
 
-    }git commit -m "Update AppServiceProvider, login.blade, .env, and build files"
-
+    }
 
 }

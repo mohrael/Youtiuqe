@@ -81,7 +81,7 @@
       @foreach($categories as $category)
         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
           <a href="{{route('showCategory',$category->id)}}" class="text-decoration-none text-dark">
-            <div class="card card-has-bg text-white border-0" style="background-image: url('{{ asset('storage/' . $category->image) }}');">
+            <div class="card card-has-bg text-white border-0" style="background-image: url('{{ asset('storage/img' . $category->image) }}');">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
                 <div class="card-body">
                   <h4 class="card-title">{{ $category->name }}</h4>

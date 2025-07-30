@@ -2,7 +2,7 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="http://ideal-flow-production.up.railway.app/login">
+    <form method="POST" action="https://ideal-flow-production.up.railway.app/login">
         @csrf
 
         <!-- Email Address -->

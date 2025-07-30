@@ -8,4 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        outDir: 'public/build', // 👈 ensures build files go where Laravel expects
+        manifest: true,         // 👈 makes sure manifest.json is generated
+        emptyOutDir: true,      // optional: clears old builds
+    },
+
 });
+

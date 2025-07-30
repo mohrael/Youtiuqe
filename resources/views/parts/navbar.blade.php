@@ -145,7 +145,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Collections</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">about us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="route('logout')">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="route('login')">Login</a></li>
                 </ul>
             </div>
         </div>
